@@ -17,8 +17,11 @@ h1 { font:500 2.75rem/1.15 Georgia,"Times New Roman",serif; letter-spacing:-.025
 .disabled-link { color:#8a8f94; }
 section { margin:0 0 32px; }
 h2 { font:500 1.45rem Georgia,"Times New Roman",serif; margin:0 0 10px; }
+h3 { font-size:1rem; font-weight:600; margin:18px 0 8px; }
 p { margin:0 0 12px; }
 .publications { margin:0; padding-left:1.4rem; }
+.publications li { margin-bottom:10px; padding-left:.2rem; }
+.manuscripts { list-style-type:disc; }
 .publication-title { font-weight:600; }
 footer { border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; margin-top:42px; padding-top:18px; }
 @media (max-width:560px) { .page{padding:40px 20px 28px} .site-header{align-items:flex-start;gap:20px} h1{font-size:2.3rem} .photo-placeholder,.profile-photo{flex-basis:88px;height:106px;width:88px} .links{margin-top:22px} }
