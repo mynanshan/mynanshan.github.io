@@ -37,3 +37,7 @@ Then open `http://localhost:8000`.
 ## What belongs on a useful academic homepage
 
 Keep the first screen concise: name, role, institution, two-sentence research identity, email, CV, and GitHub/Scholar links. Below it, show three to five current projects and a complete publication list. Update the site whenever a paper, preprint, talk, award, or position changes; avoid copying your entire CV into the page.
+
+## Stylesheet caching
+
+GitHub Pages and browsers cache CSS. After editing `style.css`, update the `?v=` value in the stylesheet link in `index.html` (for example, to a new date or content hash). Deploy both files together so visitors request the updated styles. A hard refresh (Ctrl+Shift+R on Windows/Linux or Cmd+Shift+R on macOS) can clear an older cached view.
