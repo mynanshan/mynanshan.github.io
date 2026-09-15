@@ -20,7 +20,7 @@
     </header>
 
     <nav class="links" aria-label="Profile links">
-      <!-- TODO: Replace the three placeholders below. -->
+      <a href="#projects">Projects</a>
       <a href="mailto:muye_nanshan@sfu.ca">Email</a>
       <a href="https://github.com/mynanshan">GitHub</a>
       <a href="https://scholar.google.com/citations?user=hkFvkN4AAAAJ">Google Scholar</a>
@@ -34,17 +34,60 @@
       <p>I am especially interested in functional data analysis, neuroimaging, survival analysis, and statistical machine learning. I aim to develop methods that are both theoretically principled and useful for scientific applications.</p>
     </section>
 
-    <!-- <section>
-      <h2>Research</h2>
-      <p>My current work includes functional principal component methods for sparsely observed matrix-valued trajectories and joint models connecting longitudinal neuroimaging with time-to-event outcomes. I am also exploring personalized prediction with longitudinal medical data.</p>
-    </section> -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="project-list">
+        <article class="project-card">
+          <a class="project-cover project-cover-wide" href="assets/onlinefpca-tuning.svg" aria-label="View OnlineFPCA dynamic tuning figure">
+            <img src="assets/onlinefpca-tuning.svg" alt="Three rounds of beam search: update, select, and explore smoothing parameters during online learning." width="576" height="210" loading="lazy">
+          </a>
+          <div class="project-body">
+            <p class="project-label">Functional data · Online learning</p>
+            <h3>OnlineFPCA</h3>
+            <p>Online functional principal component analysis for streaming multidimensional data. We combine spline representations with Riemannian stochastic gradient descent to learn smooth, orthonormal components, and use beam search with rolling validation to tune smoothing as new data arrive.</p>
+            <div class="project-links"><a href="https://arxiv.org/abs/2505.02131">Read the paper <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project-card project-card-split">
+          <a class="project-cover" href="assets/tumorpde.gif" aria-label="View full-size TumorPDE animation">
+            <img src="assets/tumorpde.gif" alt="Animated reconstruction of tumor infiltration across sixteen MRI brain slices." loading="lazy">
+          </a>
+          <div class="project-body">
+            <p class="project-label">Scientific computing · Medical imaging</p>
+            <h3>TumorPDE</h3>
+            <p>A research codebase for simulating and reconstructing glioma progression on patient-specific 3D brain domains. A reaction–diffusion model describes tumor infiltration; sensitivity equations support calibration of growth, diffusion, and tumor origin from single or multiple scans.</p>
+            <div class="project-links"><a href="https://github.com/mynanshan/TumorPDE">Explore the code <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-body">
+            <p class="project-label">Survival analysis · Neuroimaging</p>
+            <h3>Survival modeling with image covariates</h3>
+            <p>Our SMMR work uses a regularized mixture cure-rate model to distinguish susceptibility to Alzheimer’s conversion from time to conversion, with localized MRI effects estimated over irregular brain domains.</p>
+            <p>In ongoing work, we jointly model longitudinal images and interval-censored event times through functional principal components linked to a Cox model, enabling efficient estimation and inference for the overall image effect.</p>
+            <div class="project-links"><a href="#publication-survival">SMMR publication <span aria-hidden="true">↓</span></a><span class="project-status">Related manuscript in preparation</span></div>
+          </div>
+        </article>
+        <article class="project-card project-card-split">
+          <a class="project-cover" href="assets/gene-regulatory-network.png" aria-label="View gene regulatory network figure">
+            <img src="assets/gene-regulatory-network.png" alt="Estimated yeast gene regulatory network, with genes colored by cell-cycle phase and arrows showing regulatory relationships." width="848" height="680" loading="lazy">
+          </a>
+          <div class="project-body">
+            <p class="project-label">Dynamical systems · Sparse estimation</p>
+            <h3>Differential equation models</h3>
+            <p>Two papers on learning sparse dynamical systems from noisy, non-Gaussian observations. We develop estimation and structure-selection methods for high-dimensional linear ODEs and a joint estimation approach for sparse additive ODEs, with applications including yeast gene regulation.</p>
+            <div class="project-links"><a href="https://doi.org/10.1016/j.csda.2022.107483">Linear ODEs <span aria-hidden="true">↗</span></a><a href="https://doi.org/10.1007/s11222-022-10117-y">Additive ODEs <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <section>
       <h2>Publications</h2>
       <h3>Published or accepted</h3>
       <ol class="publications">
         <li><strong>Nanshan, M.</strong>, Zhang, N., &amp; Cao, J. (forthcoming). <span class="publication-title">Online learning of functional principal component analysis for multidimensional functional data.</span> <em>Journal of the American Statistical Association</em>, accepted. <a href="https://arxiv.org/abs/2505.02131">arXiv:2505.02131</a>.</li>
-        <li>Feng, J., <strong>Nanshan, M.</strong>, Shi, H., Wong, K. Y., Lam, K. F., &amp; Cao, J. (forthcoming). <span class="publication-title">A regularized semiparametric cure-rate model with high-dimensional imaging data.</span> <em>Statistical Methods in Medical Research</em>, accepted.</li>
+        <li id="publication-survival">Feng, J., <strong>Nanshan, M.</strong>, Shi, H., Wong, K. Y., Lam, K. F., &amp; Cao, J. (forthcoming). <span class="publication-title">A regularized semiparametric cure-rate model with high-dimensional imaging data.</span> <em>Statistical Methods in Medical Research</em>, accepted.</li>
         <li>Cao, J., Wu, S., <strong>Nanshan, M.</strong>, Shi, H., &amp; Wang, L. (2026). <span class="publication-title">Statistical learning for functional data.</span> <em>Annual Review of Statistics and Its Application</em>, 13, 149&ndash;174. <a href="https://doi.org/10.1146/annurev-statistics-042424-052503">doi:10.1146/annurev-statistics-042424-052503</a>.</li>
         <li><strong>Nanshan, M.</strong>, Zhang, N., Xun, X., &amp; Cao, J. (2022). <span class="publication-title">Dynamical modeling for non-Gaussian data with high-dimensional sparse ordinary differential equations.</span> <em>Computational Statistics &amp; Data Analysis</em>, 107483. <a href="https://doi.org/10.1016/j.csda.2022.107483">doi:10.1016/j.csda.2022.107483</a>.</li>
         <li>Zhang, N., <strong>Nanshan, M.</strong>, &amp; Cao, J. (2022). <span class="publication-title">A joint estimation approach to sparse additive ordinary differential equations.</span> <em>Statistics and Computing</em>, 32, 79. <a href="https://doi.org/10.1007/s11222-022-10117-y">doi:10.1007/s11222-022-10117-y</a>.</li>
